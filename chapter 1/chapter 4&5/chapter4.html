@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules for Naming JS Variables</title>
+</head>
+<body>
+    <h1>Rules for Naming JS Variables</h1>
+    <p id="rules"></p> <!-- Added an id to the <p> element -->
+    
+    <script>
+        let a = 'letters, numbers';
+        let b = '$';
+        let c = '_';
+        let d = 'letter';
+        let e = 'sensitive';
+        let f = 'keywords';
+        
+        // Target the <p> element using its id and set its content
+        document.getElementById('rules').innerHTML = `
+            Variable names can only contain ${a}, ${b}, and ${c}. For example: <code>$my_1stVariable</code><br>
+            Variables must begin with a ${d}, ${b}, or ${c}. For example: <code>$name, _name</code> or <code>name</code><br>
+            Variable names are case-${e}.<br>
+            Variable names should not be JS ${f}.
+        `;
+    </script>
+</body>
+</html>

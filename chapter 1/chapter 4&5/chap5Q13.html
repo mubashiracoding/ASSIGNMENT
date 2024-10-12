@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifetime Supply Calculator</title>
+</head>
+<body>
+
+    <h2>Lifetime Supply Calculator</h2>
+    <p id="result"></p>
+
+    <script>
+        let favoriteSnack = "Chips"; 
+
+        let currentAge = 25; 
+
+        let maxAge = 80; 
+
+        let estimatedAmountPerDay = 3;
+
+        let yearsLeft = maxAge - currentAge; 
+        let totalSupply = yearsLeft * 365 * estimatedAmountPerDay; // Total supply over remaining years
+
+        document.getElementById("result").innerHTML = `
+            Favorite Snack: ${favoriteSnack}<br>
+            Current Age: ${currentAge}<br>
+            Maximum Age: ${maxAge}<br>
+            Estimated Amount Per Day: ${estimatedAmountPerDay}<br>
+            You will need a total of ${totalSupply} ${favoriteSnack} for the rest of your life.`;
+    </script>
+
+</body>
+</html>

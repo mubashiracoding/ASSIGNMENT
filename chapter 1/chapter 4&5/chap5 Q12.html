@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Properties Calculator</title>
+</head>
+<body>
+
+    <h2>Circle Properties Calculator</h2>
+    <p id="result"></p>
+
+    <script>
+        let radius = 5; 
+
+        const pi = 3.142;
+
+        let circumference = 2 * pi * radius;
+
+        let area = pi * radius * radius;
+
+        document.getElementById("result").innerHTML = `
+            Radius: ${radius}<br>
+            The circumference is ${circumference.toFixed(2)}<br>
+            The area is ${area.toFixed(2)}`;
+    </script>
+
+</body>
+</html>

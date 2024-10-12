@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <script>
+        let value1 = parseInt(prompt('Enter value in Celsius temperature:'));
+
+        //  Celsius to Fahrenheit
+        let fahrenheitFromCelsius = (value1 * 9/5) + 32;
+
+        console.log(value1 + "°C is " + fahrenheitFromCelsius + "°F");
+
+        let value2 = parseInt(prompt('Enter value in Fahrenheit temperature:'));
+
+        //Fahrenheit to Celsius
+        let celsiusFromFahrenheit = (value2 - 32) * 5/9;
+
+        console.log(value2 + "°F is " + celsiusFromFahrenheit.toFixed(2) + "°C");
+
+    </script>
+</body>
+</html>

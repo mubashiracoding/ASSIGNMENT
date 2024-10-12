@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conversion</title>
+</head>
+<body>
+
+    <h2>Currency Conversion to Pakistani Rupees</h2>
+    <p id="result"></p>
+
+    <script>
+        
+        let usDollars = 10; 
+        let saudiRiyals = 25;
+        let usdToPkr = 104.80; 
+        let sarToPkr = 28; 
+
+        let totalInPkr = (usDollars * usdToPkr) + (saudiRiyals * sarToPkr);
+
+        document.getElementById("result").innerHTML = `
+            Total in Pakistani Rupees: ${totalInPkr.toFixed(2)} PKR`;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marks sheet</title>
+</head>
+<body>
+
+    <h2>marks sheet</h2>
+    <p id="result"></p>
+
+    <script>
+        let totalMarks = 500; 
+        let obtainedMarks = 420; 
+        let percentage = (obtainedMarks / totalMarks) * 100;
+
+        
+        document.getElementById("result").innerHTML = `
+            Total Marks: ${totalMarks}<br>
+            Marks Obtained: ${obtainedMarks}<br>
+            Percentage: ${percentage.toFixed(2)}%`;
+    </script>
+
+</body>
+</html>
