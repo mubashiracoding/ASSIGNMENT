@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculation</title>
+</head>
+<body>
+
+<h2>Marks Calculation</h2>
+
+<table border="1" cellpadding="10" id="resultTable">
+    <tr>
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtained Marks</th>
+        <th>Percentage</th>
+    </tr>
+</table>
+
+<script>
+    let subject1 = prompt("Enter the name of the first subject:");
+    let subject2 = prompt("Enter the name of the second subject:");
+    let subject3 = prompt("Enter the name of the third subject:");
+
+    const totalMarksPerSubject = 100;
+
+    let Marks1 = parseInt(prompt(`Enter obtained marks for ${subject1}:`));
+    let Marks2 = parseInt(prompt(`Enter obtained marks for ${subject2}:`));
+    let Marks3 = parseInt(prompt(`Enter obtained marks for ${subject3}:`));
+
+    let totalObtainedMarks = Marks1 + Marks2 + Marks3;
+    let totalMarks = totalMarksPerSubject * 3;
+    let percentage = (totalObtainedMarks / totalMarks) * 100;
+
+    function addRow(subject, totalMarks, obtainedMarks, percentage) {
+        const table = document.getElementById("resultTable");
+        const row = table.insertRow();
+        row.insertCell(0).innerText = subject;
+        row.insertCell(1).innerText = totalMarks;
+        row.insertCell(2).innerText = obtainedMarks;
+        row.insertCell(3).innerText = percentage.toFixed(2) + '%';
+    }
+
+    addRow(subject1, totalMarksPerSubject, Marks1, (Marks1 / totalMarksPerSubject) * 100);
+    addRow(subject2, totalMarksPerSubject, Marks2, (Marks2 / totalMarksPerSubject) * 100);
+    addRow(subject3, totalMarksPerSubject, Marks3, (Marks3 / totalMarksPerSubject) * 100);
+
+    addRow("Total", totalMarks, totalObtainedMarks, percentage);
+
+</script>
+
+</body>
+</html>
+

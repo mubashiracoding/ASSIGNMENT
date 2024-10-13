@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>Arithmetic Operations on Variable 'a'</h2>
+  <p id="output"></p>
+
+  <script>
+    let a = 10;
+    let output = '';
+
+    output += 'The value of a is: ' + a + '<br>';
+    ++a;
+    output += 'Now the value of ++a is: ' + a + '<br>';
+    a++;
+    output += 'Now the value of a++ is: ' + a + '<br>';
+    --a;
+    output += 'Now the value of --a is: ' + a + '<br>';
+    a--;
+    output += 'Now the value of a-- is: ' + a + '<br>';
+
+    document.getElementById('output').innerHTML = output;
+  </script>
+
+</body>
+</html>

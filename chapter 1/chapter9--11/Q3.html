@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Signal Color</title>
+</head>
+<body>
+
+  <p id="result"></p> 
+  <script>
+    let signalColor = prompt("Enter the traffic signal color (Red, Yellow, Green):").toLowerCase().trim();
+
+    let resultElement = document.getElementById("result");
+
+    if (signalColor === "red") {
+        resultElement.textContent = "Must Stop";
+    } else if (signalColor === "yellow") {
+        resultElement.textContent = "Ready to move";
+    } else if (signalColor === "green") {
+        resultElement.textContent = "Move now";
+    } else {
+        resultElement.textContent = "Invalid color";
+    }
+  </script>
+</body>
+</html>
